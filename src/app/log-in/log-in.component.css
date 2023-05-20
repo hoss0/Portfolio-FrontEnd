@@ -1,0 +1,32 @@
+.background {
+    background-image: url(https://images.unsplash.com/photo-1505445232036-56bb3c088596?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+
+.hover:hover {
+    box-shadow: 0 0 15px rgb(137, 179, 218);
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+.hover:focus{
+    background-color: rgb(255, 255, 255, 0.3);
+    box-shadow: 0 0 2px rgb(137, 179, 218);
+}
+
+.mybox {
+    background-color: rgba(56, 55, 55, 0.7);
+    border: solid white 0.1px;
+    border-radius: 15px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+
+}

@@ -1,0 +1,9 @@
+.fa-color{
+    color: rgb(255, 255, 255);
+    }
+    .fa-color:hover{
+        color: crimson;
+    }
+    .log{
+        box-shadow: 0 0 2px 0px rgba(255, 255, 255, 0.75);
+    }

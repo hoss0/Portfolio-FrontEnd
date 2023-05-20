@@ -1,0 +1,47 @@
+.contenedor{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 15%;
+    height: 400px;
+    width: 70%;
+    border-radius: 15px;
+    padding: 5%;
+    border: 1px solid white;
+    color: white;
+    box-shadow: 0 0 15px black;
+}
+input{
+    background-color: rgb(255, 255, 255,0.9);
+    color: black;
+}
+
+input:hover{
+    box-shadow: 0 0 5px rgb(37, 107, 238);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+input:focus{
+    background-color: rgba(255, 255, 255, 0.2);
+    color:white;
+}
+
+
+.contenedorfondo{
+    background-color: rgba(0, 0, 0, 0.7);
+    position:fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+button{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 20px;
+}
+.bodi{
+    position: sticky;
+    z-index: 1;
+    top: 0;
+
+}

@@ -1,0 +1,88 @@
+<div class="container" style="margin-bottom: 160px;">
+    <h1 style="margin-bottom: 60px;">Experiencia</h1>
+    <div id="edit" style="position: relative;" *ngIf="isLogged">
+        <button (click)="clickEdit()" class="btn btn-success rounded-circle" style="opacity: 0.7;"> <i
+                class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+        </button>
+    </div>
+</div>
+
+<div>{{ Experiencias }}</div>
+
+<table class="container">
+    
+    <tbody>
+        <tr *ngFor="let e of Experiencias">
+            <div id="{{e.id}}" cdkDrag class=" d-flex justify.content-center row mt-1 mb-1 "
+                style="height:auto; width: 60%; margin-top: auto; margin-bottom: auto;margin-right: auto;margin-left: auto ;border-radius: 15px ;background-color: rgb(222, 220, 230);">
+                <div class="col-sm-12 col-md-4 col-lg-4 "
+                    style="padding-bottom: 5%; padding-left: 5%;padding-right: 5%;">
+                    <div class="col-12 d-flex justify-content-center">
+                        <h3 *ngIf="!edit" style="margin-top: 10px;">{{e.titulo_empresa}}</h3>
+                        <div *ngIf="edit" class="mb-1" style="margin-top: 10px;">
+                            <input type="text" class="form-control" id="titulo{{e.id}}" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-12  d-flex justify-content-center align-middle "
+                        style="height: 70%;border-radius: 10px;background-color: rgb(39, 39, 41);">
+                        <button *ngIf="edit" (click)="clickImagen()" id="btnImg" class="btn btn-success rounded-circle"
+                            style="opacity: 0.7;"> <i class="fa-solid fa-pen-to-square"
+                                style="color: #ffffff;"></i></button>
+                        <img id="img{{e.id}}" src="{{ e.url_img }}" style="height: auto;max-width: 30%;">
+                    </div>
+                </div>
+                <!--  mitad -->
+                <div class="col-sm-12 col-md-8 col-lg-8 mt-4"
+                    style="background-color: rgba(222, 220, 230);border-radius: 0 0 10px 10px; height: 100%;">
+                    <h5 *ngIf="!edit" class="mb-3">{{ e.titulo_puesto }}</h5>
+                    <div *ngIf="edit" class="mb-3">
+                        <input id="puesto{{e.id}}" type="text" class="form-control" id="titulo_puesto" placeholder="">
+                    </div>
+                    <b *ngIf="!edit" class="mb-3">{{ e.periodo }}</b>
+                    <div *ngIf="edit" class="mb-3">
+                        <input id="periodo{{e.id}}" type="text" class="form-control" id="periodo" placeholder="">
+                    </div>
+                    <p *ngIf="!edit" class=" mt-3 mb-5">{{ e.desc }}</p>
+                    <div *ngIf="edit" class="mb-3">
+                        <textarea id="desc{{e.id}}" style="resize: none;" class="form-control" id="descripcion" rows="3"
+                            placeholder=""></textarea>
+                    </div>
+                </div>
+            </div>
+        </tr>
+
+        <div id="mas" class="d-flex justify-content-center" *ngIf="edit"
+            style="margin-top: 30px; margin-bottom: 30px; font-size: x-large;">
+            <button (click)="generarFila()" class="btn btn-outline-success rounded-circle"
+                style="opacity: 0.7;height: 50px;width: 50px;">+</button>
+
+            <button (click)="eliminarUltima()" class="btn btn-outline-danger rounded-circle"
+                style="opacity: 0.7;height: 50px;width: 50px;margin-left: 20px;"> - </button>
+        </div>
+        <div id="save" *ngIf="edit" style="margin-left: auto;">
+            <button (click)="clickSave()" class="btn btn-success rounded-pill" style="opacity: 0.7;">save</button>
+        </div>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- boton editar -->
+<!-- <div id="edit" *ngIf="isLogged" style="margin-left: auto;">
+    <button class="btn btn-success rounded-circle" style="opacity: 0.7;"> <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+    </button>
+</div> -->
+
+<!-- <div id="save" *ngIf="isLogged" style="margin-left: auto;">
+    <button class="btn btn-success rounded-pill" style="opacity: 0.7;">save</button>
+</div>  -->

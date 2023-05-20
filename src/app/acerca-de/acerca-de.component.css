@@ -1,0 +1,13 @@
+.imghost{
+    width: 200px;
+    height: 200px;
+    overflow:hidden;
+    align-content: center;
+    position: relative;
+    bottom: 80px;
+    box-shadow: 0 -5px 15px rgb(0, 0, 0,0.5);
+}
+.img{
+    position: relative;
+    bottom: 30px;
+}
