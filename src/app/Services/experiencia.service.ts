@@ -20,7 +20,7 @@ export class ExperienciaService implements OnInit{
   
 
   public lista():Observable<Experiencia[]>{
-    return this.HttpClient.get<Experiencia[]>("http://localhost:8080/exp/list", {
+    return this.HttpClient.get<Experiencia[]>("http://localhost:8080/exps", {
       headers: new HttpHeaders({
         "Authorization":"Basic dXN1YXJpbzoxMjM="})
     })
