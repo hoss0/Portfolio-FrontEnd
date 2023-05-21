@@ -88,6 +88,7 @@ generarFila(){
     periodo: '',
     url_img: ''};
     this.Experiencias.push(tempExp)
+    console.log("se cargo la experiencia en la lista"+ this.Experiencias[this.Experiencias.length - 1].id)
 
 }
   
